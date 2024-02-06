@@ -2,7 +2,8 @@ const int trigPin = A;
 const int echoPin = B;
 long duration;
 int distanceCm, distanceInch;
-
+int R1 = 0.17
+int R2 = 0.066929
 void setup() {
   // put your setup code here, to run once:
   pinMode(trigPin, OUTPUT);
@@ -19,4 +20,12 @@ void loop() {
   digitalWrite(trigPin, LOW); 
 
   duration = pulseIn(echoPin, HIGH);
+  distanceCm = duration * R1;
+  distanceInch = duration * R2;
+  Serial.print("Distance: ");
+  Serial.print(distanceCm);
+  Serial.print(" cm/");
+  Serial.print(distanceInch);
+  Serial.println(" in");
+  delay(1000);
 }
