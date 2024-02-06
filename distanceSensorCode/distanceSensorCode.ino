@@ -2,8 +2,8 @@ const int trigPin = 11;
 const int echoPin = 12;
 long duration;
 long distanceCm, distanceInch;
-double R1 = 0.17;
-double R2 = 0.066929;
+double R1 = 0.01724;
+double R2 = 0.006329;
 void setup() {
   // put your setup code here, to run once:
   pinMode(trigPin, OUTPUT);
