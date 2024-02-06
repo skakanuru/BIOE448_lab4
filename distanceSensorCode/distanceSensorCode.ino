@@ -17,4 +17,6 @@ void loop() {
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW); 
+
+  duration = pulseIn(echoPin, HIGH);
 }
